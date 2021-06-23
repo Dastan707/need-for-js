@@ -1,8 +1,9 @@
-'use strict';
 const score = document.querySelector('.score'),
     start = document.querySelector('.start'),
     gameArea = document.querySelector('.gameArea'),
     car = document.createElement('div');
+
+car.classList.add('car');
 
 
 start.addEventListener('click', startGame);
@@ -38,10 +39,12 @@ function playGame(){
 }
 
 function startRun(event){
+    event.preventDefault();
     keys[event.keys] = true;
 }
 
 function stopRun(event){
+    event.preventDefault();
     keys[event.keys] = false;
 
 }
